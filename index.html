@@ -1,37 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
+    <title>Beauté | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--poppins font from google fonts website then select popping select some types and then embed-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->
+    <link rel="icon" type="ïmage/jpg" href="beaute/mainlogo.png">
 </head>
+
 <body>
-    <header>
-        <h1>My Website</h1>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="section1">
-            <h2>Section 1</h2>
-            <p>This is the content of Section 1.</p>
-        </section>
-        <section id="section2">
-            <h2>Section 2</h2>
-            <p>This is the content of Section 2.</p>
-        </section>
-        <section id="section3">
-            <h2>Section 3</h2>
-            <p>This is the content of Section 3.</p>
-        </section>
-    </main>
-    <script src="script.js"></script>
+
+    <!--making header-->
+    <div class="header">
+        <div class="container">
+
+            <!--making navigation bar consist of logo and menu links-->
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="beaute/sublogo.png" alt="RedStore logo" width=125px></a>
+                </div>
+
+                <!--menu-->
+                <nav>
+                    <ul id="MenuItems"><!--use this id in js-->
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" alt="cart" width=30px
+                        height=30px></a><!--adding cart image in navigation section -->
+                <img src="images/menu.png" class="menu-icon"
+                    onclick="menutoggle()"><!--this is the menu icon which  will be displayed on smaller screens with 3 lines, and when we click on it, it will open upside down or like dropdown menu, to open like this we have pass one menutoggle function to it which we have written in the end in js-->
+            </div>
+
+
+            <!--making another section in header class container-->
+            <div class="row">
+
+                <!--dividing this section into 2 columns-->
+                <!--1st column for heading button and text-->
+                <div class="col-2" id="home">
+                    <h1>Ditch the Bulk,<br>Embrace the Bliss</h1>
+                    <p>With Beautè Corporations, beauty isn't just skin deep<br>—it's a journey of self-discovery and
+                        empowerment.
+                    </p>
+                    <a href="" class="btn">Explore Now
+                        &#8594;</a><!--where &#8594 is the code of arrow icon in explore now button-->
+                </div>
+
+                <!--2nd for image-->
+                <div class="col-2">
+                    <img src="beaute/mainlogo2.png" alt="header image">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Featured categories-->
+    <!--categores class to edit whole section, then small container class to edit whole row, then row class to edit area surrounding images, then col-3 class to edit col of each image then col-3 img used in css to edit image -->
+    <div class="categories">
+
+        <!--we will create 3 column for 3 images at a time in single row like we did above by making 2 columns-->
+
+        <!--small container class contains row which consist of whole columns sections then col-3 which consist of col of images-->
+        <div class="small container">,<!--container class to edit images section-->
+            <div class="row">
+
+                <!--3 columns for 3 images-->
+                <div class="col-3">
+                    <img src="beaute/left.jpg" alt="">
+                </div>
+                <div class="col-3">
+                    <img src="beaute/mid.jpg" alt="">
+                </div>
+                <div class="col-3">
+                    <img src="beaute/right.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Featured Products-->
+    <!--using same class small container to maintain same styling-->
+
+    <div class="small container">
+        <!--using again same row class to maintain same styling -->
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <!--this time we will make 4 columns-->
+
+            <!--it contains 4 different products with heading h4, image, price <p> and rating star-->
+            <div class="col-4">
+                <a href="poivrée-detail.html"><img src="beaute/poivree3.jpg"></a><!--product img-->
+                <a href="poivrée-detail.html">
+                    <h4>Poivrée</h4>
+                </a><!--product title-->
+                <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                    <i class="fa fa-star"
+                        aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <p>₱65.00</p><!--product price-->
+            </div>
+
+            <div class="col-4">
+                <a href="romande-detail.html"><img src="beaute/romande4.jpg"></a><!--product img-->
+                <a href="romande-detail.html">
+                    <h4>Romande</h4><!--product title-->
+                    <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                        <i class="fa fa-star"
+                            aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p>₱65.00</p><!--product price-->
+            </div>
+        </div>
+
+        <!--offer-->
+        <div class="offer" id="about">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-2">
+                        <img src="beaute/mainlogo.png" class="offer-img">
+                    </div>
+
+                    <div class="col-2">
+                        <p>Unlock the Power of Effortless Haircare:</p>
+                        <h1>Beautè Corporation</h1>
+                        <small>
+                            Our name, inspired by the French word "beauté" meaning "beauty," reflects our dedication to enhancing natural beauty. Our logo, with its elegant, organic design, and leaf motifs, symbolizes purity and harmony with nature. Coupled with our slogan, "Ditch the Bulk, Embrace the Bliss," we promise simplicity and pleasure in beauty care. Together, they embody our commitment to redefining beauty with natural, joyful simplicity.
+                        </small>
+                        <a href="" class="btn">Learn More
+                            &#8594;</a><!--where &#8594 is the code of arrow icon in explore now button-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------testimonials-------------->
+
+        <div class="testimonial">
+            <div class="small container"><!--section-->
+                <div class="row"><!--row-->
+
+                    <!--3 comments-->
+                    <div class="col-3"><!--3 columns-->
+
+                        <!--add " or left quote before comment-->
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <p>
+                            Nurture your hair's growth and strength with Beautè shampoo strips. Our formula is enriched
+                            with potent ingredients including castor oil, coconut oil, and jojoba oil, complemented by
+                            essential oils like rosemary and lavender. Together, these ingredients work to stimulate
+                            hair growth, strengthen follicles, and reduce hair loss. Say hello to healthier, stronger
+                            hair with every use.
+
+
+                        </p>
+                        <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                            <i class="fa fa-star"
+                                aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <img src="images/user-1.png"><!--image of person-->
+                        <h3>Nikole Kim Rodriguez</h3><!--name of person-->
+
+                    </div>
+
+                    <div class="col-3"><!--3 columns-->
+
+                        <!--add " or left quote before comment-->
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <p>
+                            Introducing our convenient on-the-go solution: Beautè shampoo comes in compact strips that
+                            effortlessly fit into any bag, making it perfect for travelers and individuals with busy
+                            lifestyles. Whether you're on a weekend getaway or navigating a hectic schedule, our
+                            innovative shampoo strips ensure you always have a refreshing and revitalizing hair care
+                            solution at your fingertips.
+
+                        </p>
+                        <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                            <i class="fa fa-star"
+                                aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <img src="images/user-2.png"><!--image of person-->
+                        <h3>Princess Thanley Magno</h3><!--name of person-->
+
+                    </div>
+
+                    <div class="col-3"><!--3 columns-->
+
+                        <!--add " or left quote before comment-->
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                        <p>
+                            Experience deep cleansing and promote scalp health with Beautè shampoo strips. Crafted with
+                            premium natural ingredients such as coconut oil, jojoba oil, tea tree oil, and aloe vera
+                            gel, our formula offers a careful cleanse from roots to tips. Say goodbye to dandruff and
+                            hello to a healthy scalp, as our shampoo strips provide the nourishment and care your hair
+                            deserves.
+                        </p>
+                        <div class="rating"><!--add stars for rating of product from font awesome 4-->
+                            <i class="fa fa-star"
+                                aria-hidden="true"></i><!--add 4 black start and one transparent star to show 4 out of 5 rating-->
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <img src="images/user-3.png"><!--image of person-->
+                        <h3>Kristel Mae Labiogo</h3><!--name of person-->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-------footer------->
+        <div class="footer" id="contact">
+            <div class="container"><!-- it will follow same styling as of header-->
+                <div class="row">
+
+
+
+                    <div class="footer-col-2">
+                        <img src="beaute/sublogo.png">
+                        <p>Beautè embodies our commitment to redefining beauty standards and promoting self-love and
+                            confidence.</p>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Physical Store Locations</h3>
+                        <ul>
+                            <li>Quezon City Memorial Circle</li>
+                            <li>S.M Fairview</li>
+                            <li>Fairview Terraces</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Contacts</h3>
+                        <ul>
+                            <li>Number: (+63) 9710468845</li>
+                            <li>Email: beautecorp.ph@gmail.com</li>
+                            <li>Instagram: @beaute-corp.ph</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!--add horizontal line and copyright text along with clickable link-->
+                <hr>
+                <a href="" class="copyright">| Beauté Corporation 2024 |</a>
+            </div>
+        </div>
+
+        <!-----------------JS----------------------->
+        <script>
+            //declare variable MenuItems which take ul having id "MenuItems"
+
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";//by default, we have set menu or dropdown menu height to 0px, means it is close by default
+
+            function menutoggle()//this is the function which we have called above in nav which works on small devices and users click on it
+            {
+                if (MenuItems.style.maxHeight == "0px")//when user click on it and if it is closed or its height is 0px, then it will open or it should have heigt of 200px upon clicking
+                {
+                    MenuItems.style.maxHeight = "200px"
+                }
+                else//if user not clicked or it has already opened, then it will upon clicking again closed
+                {
+                    MenuItems.style.maxHeight = "0px"
+                }
+
+            }
+        </script>
+
 </body>
+
 </html>
